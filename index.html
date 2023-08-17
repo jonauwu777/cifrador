@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Cifrador y Descifrador de Mensajes</h2>
+
+    <h3>Ingrese la Contraseña</h3>
+    <input id="passwordInput" type="password" placeholder="Contraseña">
+    <button onclick="checkPassword()">Ingresar</button>
+
+    <div id="messageSection" style="display: none;">
+        <h3>Cifrar Mensaje</h3>
+        <input id="inputOriginalText" type="text" placeholder="Ingrese el mensaje original">
+        <button onclick="cipherText()">Cifrar</button>
+        <input id="cipheredResult" disabled type="text" placeholder="Mensaje cifrado">
+
+        <h3>Descifrar Mensaje</h3>
+        <input id="inputCipheredText" type="text" placeholder="Ingrese el mensaje cifrado">
+        <button onclick="decipherText()">Descifrar</button>
+        <input id="decipheredResult" disabled type="text" placeholder="Mensaje descifrado">
+    </div>
+
+    <script>
+        function checkPassword() {
+            var passwordInput = document.getElementById("passwordInput").value;
+            if (passwordInput === "tu_contraseña_segura") { // Reemplaza con tu contraseña
+                document.getElementById("messageSection").style.display = "block";
+            } else {
+                alert("Contraseña incorrecta. Acceso denegado.");
+            }
+        }
+
+
+
+    </script>
+    <script src="./cifrador.js"></script>
+</body>
+</html>
